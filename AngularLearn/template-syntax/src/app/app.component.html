@@ -1,0 +1,57 @@
+<p>My Current hero is {{currentHero.name}}</p>
+<h3>
+  {{title}}
+  <img src="{{heroImageUrl}}" style="height: 30px">
+</h3>
+<p>The Sum of 1+1 is {{1+1}}</p>
+<p>The Sum of 1 + 1 is not {{1 +1 +getValue()}}</p>
+<span [hidden]="isUnchanged">change</span>
+
+<div *ngFor="let hero of heros">{{hero.name}}</div>
+<div (keyup)="0">
+  <input  #heroInput>{{heroInput.value}}q
+</div>
+<button (click)="deleteHero()">Delete hero</button>
+<button (click)="onSave($event)">Save</button>
+<button *ngFor="let hero of heros" (click)="deleteHero(hero)">{{hero.name}}</button>
+<form #heroForm (ngSubmit)="onSubmit(heroForm)"></form>
+<div class="special">Mental Model</div>
+<img src="../favicon.ico">
+<button disabled>Save</button>
+<hero-detail prefix="my name is" [hero]="currentHero"></hero-detail>
+
+<table border="1">
+    <tr>
+      <td [attr.colspan]="1+1">One-Two</td>
+    </tr>
+  <tr><td>five</td><td>xis</td></tr>
+
+</table>
+<div [class.special]="isSpecial">The Class binding is special</div>
+<button [style.color]="isSpecial ? 'red':'green'">Red</button>
+<button [style.font-size.em]="isSpecial ? 3:1">Bob</button>
+<button (click)="onSave()">On Save</button>
+<div (keyup)="0">
+  <input [value]="currentHero.name" (input)="currentHero.name=$event.target.value">
+
+</div>
+<app-sizer [(size)]="fontSizePx"></app-sizer>
+<div [style.font-size.px]="fontSizePx"> Resizable Text</div>
+<div [ngClass]="currentClass">This div is initially saveable ,unchanged ,and special</div>
+<div [style.font-size]="isSpecial ? 'x-large':'smaller'">This div is x-large or smaller</div>
+<div [ngStyle]="currentStyles">This div is initially italic, normal weight, and extra large (24px).</div>
+<div *ngFor="let hero of heros;let i=index">{{i+1}}-{{hero.name}}</div>
+<div *ngFor="let hero of heros ;trackBy: trackByHeroes">({{hero.id}}){{hero.name}}</div>
+
+
+<div [ngSwitch]="currentHero.emotion">
+  <app-sad-hero *ngSwitchCase="'sad'"  [hero]="currentHero" ></app-sad-hero>
+  <app-happy-hero *ngSwitchCase="'happy'" [hero]="currentHero"></app-happy-hero>
+  <app-confused-hero *ngSwitchCase="'confuse'" [hero]="currentHero"></app-confused-hero>
+  <app-unknown-hero *ngSwitchDefault [hero]="currentHero"></app-unknown-hero>
+</div>
+
+<hero-detail [hero]="currentHero" (deleteRequest)="deleteHero($event)"></hero-detail>
+<div>Title through uppercase pipe :{{title | uppercase}}</div>
+<div>Title through a pipe chain:{{title | uppercase | lowercase}}</div>
+<div>{{currentHero|json}}</div>
