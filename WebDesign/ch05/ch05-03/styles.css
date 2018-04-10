@@ -1,0 +1,63 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    padding: 0 1rem;
+}
+.Scroll_Wrapper{
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    counter-reset: count-the-films;
+}
+
+.scroll_wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.Item{
+    display: inline-flex;
+    white-space: normal;
+    counter-increment: count-the-films;
+    position: relative;
+}
+
+.Item::before{
+    content: counter(count-the-films);
+    position: absolute;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    top: 0;
+    left: -2rem;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    height: 1.4rem;
+    width: 1.4rem;
+    background-color: #cccccc;
+    border:1px solid #999999;
+}
+
+.Item img{
+    max-height: 7.25rem;
+}
+
+.Caption{
+    max-width: 4rem;
+    padding-left: .5rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
