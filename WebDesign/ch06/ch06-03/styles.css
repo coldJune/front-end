@@ -1,0 +1,7 @@
+.linear-gradient{
+    margin: 1rem;
+    width: 400px;
+    height: 200px;
+    background: linear-gradient(#ff9900 0, #ff9900 2%,#555555 2%,#eeeeee 50%, #ff9900 98%, #f9f9f9 100%);
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlcy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2IsYUFBYTtJQUNiLGNBQWM7SUFDZCxxR0FBcUc7Q0FDeEciLCJmaWxlIjoic3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5saW5lYXItZ3JhZGllbnR7XHJcbiAgICBtYXJnaW46IDFyZW07XHJcbiAgICB3aWR0aDogNDAwcHg7XHJcbiAgICBoZWlnaHQ6IDIwMHB4O1xyXG4gICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KCNmZjk5MDAgMCwgI2ZmOTkwMCAyJSwjNTU1NTU1IDIlLCNlZWVlZWUgNTAlLCAjZmY5OTAwIDk4JSwgI2Y5ZjlmOSAxMDAlKTtcclxufSJdfQ== */

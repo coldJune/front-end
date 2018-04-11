@@ -1,0 +1,17 @@
+.no-spread,
+.spread{
+    height: 20vmin;
+    width: 30vmin;
+    border: 1px solid #111111;
+    margin: 1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.no-spread{
+    box-shadow: 0 10px 10px;
+}
+
+.spread{
+    box-shadow: 0 10px 10px -10px;
+}
